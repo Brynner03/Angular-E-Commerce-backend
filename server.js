@@ -72,8 +72,8 @@ app.post("/checkout", async (req, res, next) => {
             quantity: item.quantity,
           })),
            mode: "payment",
-           success_url: "http://https://merch-store-api.onrender.com/success.html",
-           cancel_url: "http://https://merch-store-api.onrender.com/cancel.html",
+           success_url: "https://https://merch-store-api.onrender.com/success.html",
+           cancel_url: "https://https://merch-store-api.onrender.com/cancel.html",
         });
 
         res.status(200).json(session);
