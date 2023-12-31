@@ -11,6 +11,10 @@ app.use(cors({ origin: true, credentials: true }));
 
 const stripe = require("stripe")("sk_test_51OSoflCHoohSjYT3seUnW4lFU94CCDYqLngyxCE6JvdCF3A4UgsmZsoB26IgyEP0yVnkL0XtUllqVYOa61ioxvg600yItk0LQY");
 
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
+
 app.post("/checkout", async (req, res, next) => {
     try {
         const session = await stripe.checkout.sessions.create({
